@@ -51,7 +51,7 @@ public class TextUtilsTest {
     public void testFileToString() throws IOException {
         // TODO: fix this test so it works with Windows newline chars
         File inputFile = new File("src/test/resources/sample-docs/SampleText.txt");
-        String expectedString = "Line1 word2\nLine2 word2 word3\nLine3";
+        String expectedString = "Line1 word2" + System.lineSeparator() + "Line2 word2 word3" + System.lineSeparator() + "Line3";
         String fileString = TextUtils.fileToString(inputFile);
         assertEquals("wrong output from fileToString", expectedString, fileString);
     }
